@@ -29,6 +29,8 @@ Here is a screenshot of using local embedding vectors/responses running the same
 
 ![Script Results](/images/results.png)
 
+In addition to these two main Python scripts, I also explored the capabilities of Weaviate in a [demo project](https://github.com/tillo13/weaviate_demo). Feel free to check it out for an extended understanding of how Weaviate can be effectively used for handling and managing vector embeddings.
+
 ## Setup & Configuration
 
 Clone this repository and install necessary dependencies via `pip install -r requirements.txt`. The scripts contain global variables that allow fine-tuning of their operation to meet your specific needs. Refer to source files for more specifics.
