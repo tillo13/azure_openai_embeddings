@@ -19,7 +19,7 @@ nltk.download('punkt')
 # Global variables
 # Mostly for test, this controls how many chunks of the text to process. If set to None, all the chunks from the text will be processed. 
 # If set to a numeric value (for example, 6), only that number of initial chunks will be processed.
-ONLY_PROCESS_CHUNK_NUMBER = 500
+ONLY_PROCESS_CHUNK_NUMBER = 50
 
 # TOKEN_COST is the cost per token for using OpenAI's API service. As of October 2023, each token costs $0.0001.
 TOKEN_COST = 0.0001
@@ -33,7 +33,7 @@ MAX_CHUNK_LEN = 512
 TOP_N = 6
 
 # This is the path of the PDF file to process. The content from this file will be extracted, split into chunks, and processed to get the embeddings.
-PDF_FILE_PATH = "the-hobbit.pdf"
+PDF_FILE_PATH = "../books/the-hobbit.pdf"
 
 #This is the question or query you are trying to answer from the ingested PDF.
 USER_QUERY = "Did Bilbo Baggins ever regret his decision to join the dwarves and Gandalf on their epic adventure to capture the dragon's hoard?"
@@ -47,8 +47,6 @@ token_count = 0
 print("\n------------------START------------------")
 print(f"Start Time: {str(start_time)}")
 print(f"Processing text file: {PDF_FILE_PATH}")
-print(f"Processing text file: {PDF_FILE_PATH}")
-
 
 ADA_V2 = os.getenv("OPENAI_EMBEDDINGS_DEPLOYMENT")
 openai.api_type = "azure"
